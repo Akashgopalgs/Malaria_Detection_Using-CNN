@@ -9,7 +9,7 @@ from tensorflow.keras.applications.vgg16 import preprocess_input
 # Load the classification model
 @st.cache_resource
 def load_classification_model():
-    model = load_model('./malaria_detection_model.tf')  # Corrected file name
+    model = load_model('maleria_detection_model.tf')
     return model
 
 # Load the VGG16 feature extractor
@@ -29,16 +29,16 @@ def preprocess_and_extract_features(image):
     img_array = np.expand_dims(img_array, axis=0)  # Add batch dimension
     img_array = preprocess_input(img_array)  # Apply VGG16 preprocessing
     features = feature_extractor.predict(img_array)  # Extract features
-    features = features.reshape((features.shape[0], -1))  # Flatten features if needed
     return features
 
 # Streamlit UI
 st.title("Malaria Detection Web App")
 
-uploaded_file = st.file_uploader("Upload a blood smear image", type=["jpg", "jpeg", "png"])
+uploaded_file = st.file_uploader("Upload a blood smear image", type=["jpg", "png", "jpeg"])
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
-    st.image(image, caption='Uploaded Image', use_column_width=True)
+    st.image(image, caption='Uploaded Image', width=250)
+    st.markdown("</div>", unsafe_allow_html=True)
 
     # Extract features and predict
     try:
