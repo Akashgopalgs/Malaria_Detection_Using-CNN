@@ -1,6 +1,5 @@
-tensorflow==2.16.2 
+tensorflow==2.16.2
 streamlit==1.14.0
 numpy==1.26.4
 pandas==1.4.2
-
-
+altair>=4.2.0  # Add this to ensure the correct version of Altair is installed
