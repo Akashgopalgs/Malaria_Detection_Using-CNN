@@ -14,9 +14,9 @@ from tensorflow.keras.applications.vgg16 import preprocess_input
 #     model.save('maleria_detection_model.keras', save_format='keras')
 #     return model
 
-    model = load_model('maleria_detection_model.tf')
-    # Save the model in .keras format
-    model.save('maleria_detection_model.keras', save_format='keras')
+model = load_model('maleria_detection_model.tf')
+# Save the model in .keras format
+model.save('maleria_detection_model.keras', save_format='keras')
 
 def load_classification_model():
     model = load_model('maleria_detection_model.keras')  # Load the .keras file
