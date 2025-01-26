@@ -8,11 +8,19 @@ from tensorflow.keras.applications.vgg16 import preprocess_input
 
 # Load the classification model
 @st.cache_resource
+# def load_classification_model():
+#     model = load_model('maleria_detection_model.tf')
+#     # Save the model in .keras format
+#     model.save('maleria_detection_model.keras', save_format='keras')
+#     return model
+
+
 def load_classification_model():
-    model = load_model('maleria_detection_model.tf')
-    # Save the model in .keras format
-    model.save('maleria_detection_model.keras', save_format='keras')
+    model = load_model('maleria_detection_model.keras')  # Load the .keras file
     return model
+
+
+
 
 # Load the VGG16 feature extractor
 @st.cache_resource
