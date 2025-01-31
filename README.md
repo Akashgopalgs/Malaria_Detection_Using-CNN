@@ -3,6 +3,8 @@
 This repository contains an interactive web application built with Streamlit to detect malaria from microscopic images using a Convolutional Neural Network (CNN). The project leverages machine learning to classify images as either "Parasitized" or "Uninfected," aiding in malaria diagnosis.
 
 ---
+![Screenshot 2025-01-21 041759](https://github.com/user-attachments/assets/1e457438-d641-439b-b5ff-120c3ea006b5)
+---
 
 ## 🚀 Features
 
